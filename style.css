@@ -1,0 +1,434 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Roboto:wght@400;700&display=swap');
+/* NOTE: max-width: 20% in css means => When you set max-width: 20% in CSS, it means that the maximum width of an element should be 20% of its containing element's width.
+
+Let's say you have a container element with a width of 500 pixels. If you apply max-width: 20% to a child element inside that container, the child element's width will be limited to a maximum of 20% of the container's width, which is 100 pixels (20% of 500).
+
+However, if the container's width is smaller than 100 pixels, the child element's width will be restricted to the container's width itself.
+
+The max-width property is commonly used in responsive web design to ensure that elements don't become too wide on larger screens while still maintaining their responsiveness on smaller screens. */
+/* resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root { /*we defind  5 variables at the root */
+    --primary-text-color: #183b56;
+    --secondary-text-color: #577592;
+    --accent-color: #2294ed;
+    --accent-color-dark: #1d69a3;
+    --padding-inline-section: 20px;/*padding inline means padding from left and right*/
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--primary-text-color);
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.25rem;
+    color: var(--secondary-text-color);
+    line-height: 1.8rem;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+ul{
+   list-style: none;
+}
+
+/* utiliity classes */
+
+.small-bold-text {
+    font-size: 1rem;
+    font-weight: 700;
+   
+}
+
+.container{
+    max-width: 1180px; /*container can not exceed than 1180 px */
+    margin-inline: auto; /*margin-inline =>margin from left and right = auto , which means container center me aajaayega*/
+    padding-inline: var(--padding-inline-section);  /* padding-inline => padding from left and right */
+   overflow: hidden;
+}
+.flex{
+    display: flex;
+    align-items: center;/*text center me hojaayenge*/
+}
+
+.hover-link {
+    color: var(--secondary-text-color);
+    transition: 0.2s ease-out;
+
+}
+
+.hover-link:hover {
+    color: var(--accent-color);
+
+}
+
+.primary-button {
+    background-color: var(--accent-color);
+    border-radius: 6px;
+    font-weight: 700;
+    color: white !important;
+    padding: 12px 24px;
+    box-shadow: 0 0 2px var(--secondary-text-color);/*'xaxis' 'yaxis' 'shaodow kitna blur hoga' 'shadow color'*/
+    transition: 0.2s ease-out;
+
+    text-align: center;
+
+}
+
+.primary-button:hover{
+    background-color: var(--accent-color-dark);
+}
+
+.secondary-button {
+   border: 0.5px solid var(--secondary-text-color);
+   border-radius: 6px;
+   font-weight: 700;
+   padding: 12px 24px;
+   transition: 0.2s ease-out;
+}
+
+.secondary-button:hover {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+}
+
+
+
+
+
+/* top banner */
+
+.top-banner {
+    /* background-image: url('./assets/asset\ 32.png');  */
+    background-color: #4fb3d4;
+   
+    
+    /*background-size: 40px; /* ye bg-image 40px karke repaat kerte rahega*/ 
+    /*background-repeat: no-repeat; /*=> ek baar 40px ka bg-image hi rhega*/
+    
+}
+
+
+
+
+.banner-text {
+    color: white;
+    padding: 15px 30px; 
+    text-align: center;
+}
+
+
+
+
+/* nav bar */
+
+.main-nav {
+     margin-top: 20px;/*.main-nav aur nav bar ka margin same hi hai*/
+     justify-content: space-between; /*image and ul ke beech me space aajaayega*/
+     position: relative;
+}
+
+.company-logo img{
+    width: 200px;
+}
+
+.nav-links ul{ /*parent container hai */
+    justify-content: end; /*hamesh left side me align rhe*/
+    gap: 40px;
+}
+
+.nav-links {
+    flex-basis: 730px; /*ye nav-links ka width 730px kr diya hai li ko nahi*/
+    
+}
+
+.nav-toggle {
+    display: none;
+}
+
+
+/* header section */
+
+
+header {
+     padding: 50px var(--padding-inline-section);
+} 
+
+.header-section {
+     justify-content: center;
+     gap: 50px;
+} 
+
+.header-left {
+   max-width: 40vw; 
+  /* Note: In CSS, the property max-width with a value of 40vw sets the maximum width of an element relative to the viewport width (vw).
+
+The viewport width refers to the width of the browser window or the viewport in which the webpage is displayed. The value 40vw means that the maximum width of the element should be 40% of the viewport width.
+
+For example, if the viewport width is 1000 pixels, the element with max-width: 40vw will have a maximum width of 400 pixels (40% of 1000). If the viewport width is 800 pixels, the maximum width will be 320 pixels (40% of 800).
+
+This is a responsive technique that allows the element to adapt to different screen sizes. When the viewport becomes smaller, the element will shrink accordingly, but it will not exceed 40% of the viewport width. */
+}
+
+.header-left h1{
+    margin-top: 20px;
+}
+
+.get-started-btn {
+    margin-top: 20px;
+}
+
+.header-right img {
+    width: 100%;
+} 
+
+
+
+/* companies section */
+
+
+.companies-header {
+    text-align: center;
+    margin-block:30px; /*top and bottom ko ek saath*/
+    color: var(--primary-text-color);
+
+}
+
+.logos{
+   justify-content: space-evenly;
+   flex-wrap: wrap;
+   gap: 20px;
+}
+
+
+.logo{
+    height: 46px;
+}
+
+
+
+/* festures-section */
+
+
+.features-secion {
+    padding: 100px var(--padding-inline-section) 0; /*top - leftright - bottom*/
+    background-image: url(assets/bgcolor.svg);
+    background-repeat: no-repeat; 
+    background-size: 800px;
+    background-position: center;
+    
+}
+
+
+.features-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.features-header a {
+    margin-top: 20px;
+}
+
+.features-area {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    
+}
+
+.features-card {
+   flex-direction: column; /*ovewrite kr diya flex direction row ko*/
+   gap: 20px;
+   max-width: 30%; /*saare childrens ko 30% width mil jaayega and screen bada ho ya chota, max. width elements ka 30% width of parent container rhega*/
+   margin-top: 50px;
+    
+}
+
+.features-card p {
+    text-align: center;
+}
+
+
+
+
+/* big-feature-section */
+
+
+.big-feature-section {
+    padding: 30px var(--padding-inline-section) 0px;
+}
+
+.big-feature-container {
+    gap: 30px;
+    /*justify-content: space-between;/*ye use nhi kiye in place of gap because ye remaining space ko elements ke beech me laata hai and gap distance deta b/w two elements*/
+    /*align-items: flex-start;/*upper chla jaayega*/
+}
+
+#second-big-feature{
+    flex-direction: row-reverse;
+}
+
+.feature-img img{
+    width: 100%; /*apne parent ke width ka 100% rahega, iska parent feature-image(flex 1) hai and dusra flex 'feature-desc' hai*/
+    
+}
+
+
+.feature-desc {
+    flex-direction: column;
+    align-items: flex-start; /*items left hand side se start horha hoga*/
+    /*align-items: flex-end; /*NOTE: align items column direction ke liye alag kaam krega and row-direction ke liye alag kaam krega jaise . justify content jaise row ke lioye kaam krta hai waise hi align item row ke liye kaam krega*/
+    gap: 10px; 
+
+}
+
+
+
+/* Examples section */
+.examples-section {
+   padding-block: 80px var(--padding-inline-section);
+}
+
+.examples-header {
+    flex-direction: column; 
+    align-items: center; 
+    gap: 20px;
+    text-align: center;
+}
+/* 
+.example-heading-text {
+   margin-bottom: 20px; => space b/w h2 and a
+} */
+
+.examples-area {
+     justify-content: space-between;
+     margin-block:30px ; /*top and bottom*/
+     flex-wrap: wrap;
+}
+
+
+.example-card {
+    width: 23%;  /*saara card 23% ka ho*/
+   
+    height: 300px;
+    position: relative;
+    background-color: black;
+    /* background-image: url(./assets/asset\ 36.jpeg); */
+    background: linear-gradient(rgb(0, 0, 0, 0.1), rgb(0, 0, 0, 0.8)), url(asset\ 36.jpeg);
+    background-size: cover;
+    transition: 0.2s;
+}
+
+.card-text {
+    position: absolute;/*ye apne parent example-card ke relative kaam krega as absolute usi parent ke relative kaam krta jis parent ka position relative ho*/
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    color: white;
+}
+
+
+.example-card:hover {
+    box-shadow: 0 0 10px #888;
+}
+
+
+.example-card:nth-child(3){ /*3rd child ke liye background*/
+    background: linear-gradient(rgb(0, 0, 0, 0.1), rgb(0, 0, 0, 0.8)), url(asset\ 38.jpeg);
+    background-size: cover;
+}
+
+.example-card:nth-child(4){ /* 4th child ke liye background*/
+    background: linear-gradient(rgb(0, 0, 0, 0.1), rgb(0, 0, 0, 0.8)), url(asset\ 39.jpeg);
+    background-size: cover;
+}
+
+
+
+/* cta section */
+
+.cta-section-container {
+     flex-direction: column;
+     gap: 30px;
+     color: white;
+     text-align: center;
+     
+}
+
+.cta-section-container p {
+    color: white;
+    margin-top: 20px;
+}
+
+
+.cta-section{
+    background-color: #183b54;
+    padding: 120px var(--padding-inline-section) 80px;
+}
+
+
+
+
+/* footer */
+
+
+.link-column {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+   
+}
+
+.footer-container {
+    justify-content: space-between;
+    align-items: flex-start; /*upper chla jaayega*/
+
+    
+}
+
+footer {
+    padding-block: 80px; /*top and bottom*/
+    background-color: #ebf2fa;
+    
+}
+
+
+
+/* sub footer */
+
+
+.subfooter {
+    background-color: #b9cde4;
+    padding: var(--padding-inline-section);
+}
+
+
+.subfooter-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+
+

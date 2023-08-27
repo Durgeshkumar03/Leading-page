@@ -1,0 +1,116 @@
+@media screen and (max-width: 991px){/*upto 991px tak*/
+    h3 {
+       font-size: 1.2rem;
+    }
+   
+    .nav-toggle {
+        display: block; /*inline tha block kr diye ehwga ye row mw hi as flex hai na*/
+        margin-right: 20px;
+   
+    }
+
+    .main-nav {
+       overflow: initial;
+       
+    }
+
+    .nav-links {
+        position: absolute;
+        background-color: white;
+        left: -100%;
+        top: 100%;
+        width: 100%;
+        padding-block: 20px;
+        transition: 0.2s ease-in-out;
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+    }
+
+    .examples-area{
+        gap: 20px;
+    }
+    
+    .example-card{
+        width: calc(50% - 10px);
+        height: 180px;
+    }  
+    .cta-section {
+        padding-block: 80px;
+    }
+   
+  
+}
+
+
+@media screen and (max-width: 767px) {
+    
+    .primary-button{
+        width: 100%; /*relative to parent header-left*/
+        
+    }
+
+
+    .header-section {
+        flex-direction: column-reverse; /*image pehle aa ske*/
+    }
+    
+    .header-left {
+        /*max-width: 100%; => ye isliye nahi kiye kyoki ye with reapect to container chota hoga and thoda overflow kr rha hai*/
+        max-width: 100vw;  /*100vw hojayega width ,vw is relative to screen */
+        
+        text-align: center;
+       
+    }
+
+    .features-card {
+        min-width: calc(50% - 10px);/*  min-width: 30%; means As the name suggests min-width means that the element will have atleast 30% width relative to its parent ( can be 30% and more upto 100%) . Since div is a block level element, it wants to take up the complete space available to it, and it'll expand to 100%. width:30%; will specifically limit the element to only 30%*/
+    }  
+
+    .big-feature-container, #second-big-feature { /*id jyada prefernce le rha tha class ke uper*/
+        flex-direction: column;
+    }
+   
+    .footer-container {
+        flex-direction: column;
+        gap: 40px;
+        text-align: center;
+        align-items: center;
+        
+        
+    }
+    .link-column {
+        align-items: stretch;
+    }
+}
+
+
+@media screen and (max-width: 479px) {
+    :root {
+        --padding-inline-section: 10px;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    p{
+        font-size: 1rem;
+    }
+    .features-card {
+        min-width: 100%;
+    }  
+    .example-card{
+        width: 100%;
+        height: 180px;
+    }  
+
+    
+}
